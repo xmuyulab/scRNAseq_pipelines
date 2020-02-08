@@ -1,4 +1,4 @@
-# PIPELINE
+# scRNAseq_pipelines
 Comparison of High-Throughput Single-Cell RNA Sequencing Data Processing Pipelines
 
 # Install Nextflow
@@ -61,7 +61,7 @@ If this is your first time working with Conda, you may need to edit your configu
 
 ## Clone Repository
 
-`$ git clone git@github.com:xmuyulab/PIPELINE.git`
+`$ git clone git@github.com:xmuyulab/scRNAseq_pipelines.git`
 
 ## Install Dependencies
 
@@ -69,13 +69,13 @@ Configuring the software environment.
 Provides an execution environment for seven pieces of software, which can be installed as needed
 
 ```
-$ conda env create -f PIPELINE/envs/UMI-tools.yml
-$ conda env create -f PIPELINE/envs/umis.yml
-$ conda env create -f PIPELINE/envs/dropEst.yml
-$ conda env create -f PIPELINE/envs/zUMIs.yml
-$ conda env create -f PIPELINE/envs/scPipe.yml
-$ conda env create -f PIPELINE/envs/Dropseq.yml
-$ conda env create -f PIPELINE/envs/cellranger.yml
+$ conda env create -f scRNAseq_pipelines/envs/UMI-tools.yml
+$ conda env create -f scRNAseq_pipelines/envs/umis.yml
+$ conda env create -f scRNAseq_pipelines/envs/dropEst.yml
+$ conda env create -f scRNAseq_pipelines/envs/zUMIs.yml
+$ conda env create -f scRNAseq_pipelines/envs/scPipe.yml
+$ conda env create -f scRNAseq_pipelines/envs/Dropseq.yml
+$ conda env create -f scRNAseq_pipelines/envs/cellranger.yml
 ```
 
 # Drop-seq_tools
@@ -125,7 +125,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 ```
 ### Execute the script
 
-4、`$ cd PIPELINE/Drop-seq_tools`
+4、`$ cd scRNAseq_pipelines/Drop-seq_tools`
 
 5、`--help` parameters help the user with this script.
 
@@ -135,7 +135,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # umis
 
-1、`$ cd PIPELINE/umis`
+1、`$ cd scRNAseq_pipelines/umis`
 
 2、`--help` parameters help the user with this script.
 
@@ -147,7 +147,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # UMI-tools
 
-1、`$ cd PIPELINE/UMI-tools`
+1、`$ cd scRNAseq_pipelines/UMI-tools`
 
 2、`--help` parameters help the user with this script.
 
@@ -157,7 +157,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # dropEst
 
-1、`$ cd PIPELINE/dropEst`
+1、`$ cd scRNAseq_pipelines/dropEst`
 
 2、`--help` parameters help the user with this script.
 
@@ -167,7 +167,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # zUMIs
 
-1、`$ cd PIPELINE/zUMIS`
+1、`$ cd scRNAseq_pipelines/zUMIS`
 
 2、`--help` parameters help the user with this script.
 
@@ -176,7 +176,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 3、`$ nextflow run zumis.nf --shell [ ] --yaml [ ]  --outdir [ ]`
 
 # scPipe
-1、`$ cd PIPELINE/scPipe`
+1、`$ cd scRNAseq_pipelines/scPipe`
 
 2、`--help` parameters help the user with this script.
 
@@ -209,7 +209,7 @@ Save exit edit
 
 ### Execute the script
 
-4、`$ cd PIPELINE/CellRanger`
+4、`$ cd scRNAseq_pipelines/CellRanger`
 
 5、`--help` parameters help the user with this script.
 
@@ -218,5 +218,6 @@ Save exit edit
 6、`$ nextflow run cellranger.nf --I [ ] --O [ ]  --r [ ]  --set_cell_number [ ]`
 
 ## Cite
+
 
 
