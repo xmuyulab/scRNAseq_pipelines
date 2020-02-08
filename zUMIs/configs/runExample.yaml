@@ -1,0 +1,49 @@
+project: 0.5m
+sequence_files:
+  file1:
+    name: /mnt/data/lmy/dropseq_data/79/0.5m/0.5m_1.fq.gz
+    base_definition:
+    - BC(1-12)
+    - UMI(13-20)
+  file2:
+    name: /mnt/data/lmy/dropseq_data/79/0.5m/0.5m_2.fq.gz
+    base_definition:
+    - cDNA(1-60)
+reference:
+  STAR_index: /mnt/data/txw/zumis/mm10_STAR5idx_noGTF
+  GTF_file: /mnt/data/Static_file/dropseq_metadata/mm10.gtf
+  additional_STAR_params: --limitIObufferSize 1500000000 --limitOutSJcollapsed 10000000
+  additional_files: ~
+out_dir: /mnt/data/tst/1225/pipelines/zUMIs/result
+num_threads: 10
+mem_limit: null
+filter_cutoffs:
+  BC_filter:
+    num_bases: 1
+    phred: 20
+  UMI_filter:
+    num_bases: 1
+    phred: 20
+barcodes:
+  barcode_num: ~
+  barcode_file: ~
+  automatic: yes
+  BarcodeBinning: 0
+  nReadsperCell: 100
+counting_opts:
+  introns: yes
+  downsampling: '0'
+  strand: 0
+  Ham_Dist: 0
+  velocyto: no
+  primaryHit: yes
+  twoPass: no
+make_stats: yes
+which_Stage: Filtering
+samtools_exec: samtools
+pigz_exec: pigz
+STAR_exec: STAR
+Rscript_exec: Rscript
+zUMIs_directory: /mnt/data/lmy/zUMIs
+read_layout: SE
+

@@ -1,0 +1,44 @@
+<config>
+    <!-- droptag -->
+    <TagsSearch>
+        <protocol>drop_seq</protocol>
+        <MultipleBarcodeSearch>
+            <barcode_starts>0</barcode_starts>
+            <barcode_lengths>16</barcode_lengths>
+            <umi_start>16</umi_start>
+            <umi_length>12</umi_length>
+        </MultipleBarcodeSearch>
+
+        <Processing>
+            <min_align_length>10</min_align_length>
+            <reads_per_out_file>10000000</reads_per_out_file>
+        </Processing>
+    </TagsSearch>
+
+    <!-- dropest -->
+    <Estimation>
+        <Merge>
+            <min_merge_fraction>0.2</min_merge_fraction>
+            <max_cb_merge_edit_distance>2</max_cb_merge_edit_distance>
+            <max_umi_merge_edit_distance>1</max_umi_merge_edit_distance>
+            <min_genes_after_merge>100</min_genes_after_merge>
+            <min_genes_before_merge>20</min_genes_before_merge>
+        </Merge>
+
+        <PreciseMerge>
+            <max_merge_prob>1e-5</max_merge_prob>
+            <max_real_merge_prob>1e-7</max_real_merge_prob>
+        </PreciseMerge>
+
+        <BamTags>
+            <cb>XC</cb>
+            <umi>XM</umi>
+            <gene>XG</gene>
+            <Type>
+                <tag>XF</tag>
+                <intronic>INTRONIC</intronic>
+                <intergenic>INTERGENIC</intergenic>
+            </Type>
+        </BamTags>
+    </Estimation>
+</config>
