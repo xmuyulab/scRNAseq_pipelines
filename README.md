@@ -12,20 +12,17 @@ https://www.nextflow.io/docs/latest/getstarted.html#requirements
 
 2、`$ mkdir Nextflow && cd Nextflow`
 
-3、`$ wget -qO- https://get.nextflow.io | bash` 
+3、`$ wget -qO- https://get.nextflow.io | bash`
+
 It will create the nextflow main executable file in the current directory.
 
 4、move the nextflow file to a directory accessible by your $PATH variable (this is only required to avoid remembering and typing the full path to nextflow each time you need to run it).
-
-`$ vi ~/.bashrc`
-export PATH=/path/to/Nextflow:$PATH
-`$ source ~/.bashrc`
 
 5、Test Nextflow
 
 `$ nextflow run hello`
 
-Output
+Output the following to indicate that the installation was successful
 
 ```
 N E X T F L O W  ~  version 19.04.1
