@@ -1,9 +1,9 @@
-# pipelines
+# PIPELINE
 scRNA-seq 
 
 ## working directory
 
-`lmy@lab3:/mnt/data/tst/1225/pipelines` 
+`lmy@lab3:/mnt/data/tst/1225/PIPELINE` 
 
 # Install Nextflow
 https://www.nextflow.io/docs/latest/getstarted.html#requirements
@@ -32,18 +32,18 @@ export PATH=/path/to/Nextflow:$PATH
 Output
 
 ```
-N E X T F L O W  ~  version 19.10.0
+N E X T F L O W  ~  version 19.04.1
 Pulling nextflow-io/hello ...
 downloaded from https://github.com/nextflow-io/hello.git
-Launching `nextflow-io/hello` [tiny_mendel] - revision: a9012339ce [master]
-WARN: The use of `echo` method is deprecated
+Launching `nextflow-io/hello` [nice_wozniak] - revision: a9012339ce [master]
+[warm up] executor > local
 executor >  local (4)
-[66/fdf8c6] process > sayHello (1) [100%] 4 of 4 ✔
+[bc/a32c37] process > sayHello [100%] 4 of 4 ✔
+Ciao world!
+
 Hola world!
 
 Hello world!
-
-Ciao world!
 
 Bonjour world!
 ```
@@ -68,7 +68,7 @@ If this is your first time working with Conda, you may need to edit your configu
 
 ## Clone Repository
 
-`$ git clone git@github.com:lmyiing/pipelines.git`
+`$ git clone git@github.com:xmuyulab/PIPELINE.git`
 
 ## Install Dependencies
 
@@ -76,13 +76,13 @@ Configuring the software environment.
 Provides an execution environment for seven pieces of software, which can be installed as needed
 
 ```
-$ conda env create -f pipelines/envs/UMI-tools.yml
-$ conda env create -f pipelines/envs/umis.yml
-$ conda env create -f pipelines/envs/dropEst.yml
-$ conda env create -f pipelines/envs/zUMIs.yml
-$ conda env create -f pipelines/envs/scPipe.yml
-$ conda env create -f pipelines/envs/Dropseq.yml
-$ conda env create -f pipelines/envs/cellranger.yml
+$ conda env create -f PIPELINE/envs/UMI-tools.yml
+$ conda env create -f PIPELINE/envs/umis.yml
+$ conda env create -f PIPELINE/envs/dropEst.yml
+$ conda env create -f PIPELINE/envs/zUMIs.yml
+$ conda env create -f PIPELINE/envs/scPipe.yml
+$ conda env create -f PIPELINE/envs/Dropseq.yml
+$ conda env create -f PIPELINE/envs/cellranger.yml
 ```
 
 # Drop-seq_tools
@@ -132,7 +132,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 ```
 ### Execute the script
 
-4、`$ cd pipelines/Drop-seq_tools`
+4、`$ cd PIPELINE/Drop-seq_tools`
 
 5、`--help` parameters help the user with this script.
 
@@ -142,7 +142,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # umis
 
-1、`$ cd pipelines/umis`
+1、`$ cd PIPELINE/umis`
 
 2、`--help` parameters help the user with this script.
 
@@ -154,7 +154,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # UMI-tools
 
-1、`$ cd pipelines/UMI-tools`
+1、`$ cd PIPELINE/UMI-tools`
 
 2、`--help` parameters help the user with this script.
 
@@ -164,7 +164,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # dropEst
 
-1、`$ cd pipelines/dropEst`
+1、`$ cd PIPELINE/dropEst`
 
 2、`--help` parameters help the user with this script.
 
@@ -174,7 +174,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 
 # zUMIs
 
-1、`$ cd pipelines/zUMIS`
+1、`$ cd PIPELINE/zUMIS`
 
 2、`--help` parameters help the user with this script.
 
@@ -183,7 +183,7 @@ files_to_delete="$files_to_delete $tmpdir/merged.bam"
 3、`$ nextflow run zumis.nf --shell [ ] --yaml [ ]  --outdir [ ]`
 
 # scPipe
-1、`$ cd pipelines/scPipe`
+1、`$ cd PIPELINE/scPipe`
 
 2、`--help` parameters help the user with this script.
 
@@ -216,7 +216,7 @@ Save exit edit
 
 ### Execute the script
 
-4、`$ cd pipelines/CellRanger`
+4、`$ cd PIPELINE/CellRanger`
 
 5、`--help` parameters help the user with this script.
 
@@ -225,4 +225,5 @@ Save exit edit
 6、`$ nextflow run cellranger.nf --I [ ] --O [ ]  --r [ ]  --set_cell_number [ ]`
 
 ## Cite
+
 
