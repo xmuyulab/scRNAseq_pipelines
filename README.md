@@ -1,9 +1,5 @@
 # PIPELINE
-scRNA-seq 
-
-## working directory
-
-`lmy@lab3:/mnt/data/tst/1225/PIPELINE` 
+Comparison of High-Throughput Single-Cell RNA Sequencing Data Processing Pipelines
 
 # Install Nextflow
 https://www.nextflow.io/docs/latest/getstarted.html#requirements
