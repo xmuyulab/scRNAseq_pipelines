@@ -219,5 +219,5 @@ Save exit edit
 
 ## Cite
 
-
+Mingxuan Gao, Mingyi Ling, Xinwei Tang, Shun Wang, Xu Xiao, Ying Qiao, Wenxian Yang, Rongshan Yu. Comparison of High-Throughput Single-Cell RNA Sequencing Data Processing Pipelines. bioRxiv 2020.02.09.940221; doi: https://doi.org/10.1101/2020.02.09.940221
 
