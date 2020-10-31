@@ -1,0 +1,15 @@
+library(Seurat)
+library(dplyr)
+
+expr <- read.csv("total_expr.csv.gz", row.names = 1)
+seuset <- CreateSeuratObject(expr, project = "total")
+seuset <- subset(seuset, subset = nFeature_RNA > 0)
+seuset <- NormalizeData(seuset, normalization.method = "LogNormalize", scale.factor = 10000)
+seuset <- FindVariableFeatures(seuset, selection.method = "vst", nfeatures = 2000)
+seuset.genes <- rownames(seuset)
+seuset <- ScaleData(seuset, features = seuset.genes)
+seuset <- RunPCA(seuset, features = VariableFeatures(object = seuset))
+seuset <- FindNeighbors(seuset, dims = 1:20)
+seuset <- FindClusters(seuset, resolution = 0.5)
+seuset <- RunTSNE(seuset, dims = 1:20)
+DimPlot(seuset, reduction = "tsne", group.by = "orig.ident")  # Plot t-SNE by pipeline
